@@ -1,5 +1,5 @@
 <?php
 
-$version = 'CodeMirror 2.25 for MODX Evolution';
+$version = 'CodeMirror 3.11 for MODX Evolution';
 
 
