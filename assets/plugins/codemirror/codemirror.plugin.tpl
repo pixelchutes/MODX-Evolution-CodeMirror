@@ -1,6 +1,6 @@
 /**
  * @name: CodeMirror
- * @description: <b>2.25</b> JavaScript library that can be used to create a relatively pleasant editor interface
+ * @description: <b>3.11</b> JavaScript library that can be used to create a relatively pleasant editor interface
  *
  * @events:
  * - OnDocFormRender

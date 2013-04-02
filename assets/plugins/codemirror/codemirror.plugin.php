@@ -4,14 +4,16 @@
  * @description JavaScript library that can be used to create a relatively pleasant editor interface
  *
  * @released    Jul 5, 2012
- * @CodeMirror  2.25
+ * @updated     Apr 2, 2013
+ * @CodeMirror  3.11
  *
  * @required    MODx 0.9.6.3+
- *              CodeMirror  2.25 : pl
+ *              CodeMirror  3.11 : pl
  *
- * @confirmed   MODx Evolution 1.0.6
+ * @confirmed   MODx Evolution 1.0.9
  *
  * @author      hansek from www.modxcms.cz  <http://www.modxcms.cz>
+ * @author      pixelchutes (Mike Reid)
  *
  * @see         http://codemirror.net/
  */
