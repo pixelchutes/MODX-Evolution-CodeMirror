@@ -89,6 +89,7 @@ HEREDOC;
     $output .= <<< HEREDOC
     <script src="{$_CM_URL}cm/lib/codemirror.js"></script>
     <link rel="stylesheet" href="{$_CM_URL}cm/lib/codemirror.css">
+    <link rel="stylesheet" href="{$_CM_URL}cm/addon/dialog/dialog.css">
 
     <script src="{$_CM_URL}cm/mode/xml/xml.js"></script>
     <script src="{$_CM_URL}cm/mode/javascript/javascript.js"></script>
@@ -96,6 +97,14 @@ HEREDOC;
     <script src="{$_CM_URL}cm/mode/clike/clike.js"></script>
     <script src="{$_CM_URL}cm/mode/htmlmixed/htmlmixed.js"></script>
     <script src="{$_CM_URL}cm/mode/php/php.js"></script>
+
+    <script src="{$_CM_URL}cm/addon/edit/matchbrackets.js"></script>
+    <script src="{$_CM_URL}cm/addon/search/search.js"></script>
+    <script src="{$_CM_URL}cm/addon/search/searchcursor.js"></script>
+    <script src="{$_CM_URL}cm/addon/dialog/dialog.js"></script>
+    <script src="{$_CM_URL}cm/addon/fold/foldcode.js"></script>
+    <script src="{$_CM_URL}cm/addon/fold/brace-fold.js"></script>
+    <script src="{$_CM_URL}cm/addon/fold/xml-fold.js"></script>
 
     <link rel="stylesheet" href="{$_CM_URL}codemirror.plugin.css">
     <script src="{$_CM_URL}codemirror.plugin.js"></script>
@@ -161,13 +170,21 @@ HEREDOC;
             onKeyEvent: myEventHandler,
             lineWrapping: '{$lineWrapping}',
             // onCursorActivity: positionHolder
+            extraKeys: {
+                "Ctrl-Q": function(cm){foldFunc(cm, cm.getCursor().line);},
+                "F6": function(cm) {
+                  setFullScreen(cm, !isFullScreen(cm));
+                },
+                "Esc": function(cm) {
+                  if (isFullScreen(cm)) setFullScreen(cm, false);
+                }
+              }
         };
 
         var myCodeMirror = [];
 
         var myTextArea = document.getElementsByName('$textarea_name')[0];
         myCodeMirror.push(CodeMirror.fromTextArea(myTextArea, config));
-
 
         if (document.getElementById('tv_body') !== null) {
             var tv_textareas = $$('#tv_body textarea');
