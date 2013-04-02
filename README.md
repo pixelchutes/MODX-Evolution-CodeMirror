@@ -1,5 +1,5 @@
 # CodeMirror for MODX Evolution
-Implementation of CodeMirror 2 ([http://codemirror.net] (http://codemirror.net)) into MODX Evolution Manager.
+Implementation of CodeMirror 3 ([http://codemirror.net] (http://codemirror.net)) into MODX Evolution Manager.
 
 Thread on MODX Forum: [CodeMirror for MODX Evolution] (http://forums.modx.com/thread/73753/codemirror-for-modx-evolution)
 
@@ -11,12 +11,18 @@ Repository is using Git Submodules. After cloning of repository stay in root and
     git submodule update
 
 ## Changes ##
+3.11 (2013-04-02)
+- Updated CodeMirror JS core to 3.11
+- Added fullscreen option (F6)
+- Added search & replace (Ctrl-F / Cmd-F and Shift-Ctrl-F / Cmd-Option-F)
+- Re-added bracket matching (now via add-on)
+- Added code folding (Ctrl-Q)
+
 2.25 (2012-06-05)
 - updated CodeMirror JS core to 2.25
 - added CodeMirror themes to settings
 - added new CodeMirror settings (thy dmit3yy)
 - improvment in path definition (thx yama)
-
 
 2.23 b (2012-04-15)
 
